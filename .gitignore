@@ -3,8 +3,21 @@
 # No se publica en un repositorio público.
 documentos/
 
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Dependencias
+/node_modules/
+
+# Vercel
+.vercel
+
+# Variables de entorno
+.env*.local
+
 # Sistema operativo / editor
 .DS_Store
 Thumbs.db
 *.log
-node_modules/

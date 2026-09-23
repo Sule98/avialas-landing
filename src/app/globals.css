@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* ===================================================================
+   AVIALAS S.A. — Tokens de marca (Manual de Identidad Visual, USOS 2024)
+   Tailwind v4: los colores/tipografías se declaran aquí y quedan
+   disponibles como utilidades (bg-avialas-yellow, font-heading, etc.)
+   =================================================================== */
+@theme inline {
+  --color-avialas-yellow: #f8b700;   /* Amarillo Mostaza — PANTONE 3514 C — logotipo */
+  --color-avialas-red: #e63905;      /* Rojo — PANTONE 1665 C — genérico */
+  --color-avialas-gold: #cc9933;     /* Dorado — complementario */
+  --color-avialas-dark: #1a1a1a;     /* Negro al 90% */
+  --color-avialas-gray: #e6e6e6;     /* Negro al 10% */
+  --color-avialas-reddeep: #bf4200;  /* PANTONE 1525 C — complementario */
+
+  --font-heading: var(--font-poppins), "Century Gothic", "Segoe UI", sans-serif;
+  --font-body: var(--font-mulish), "Tahoma", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-avialas-dark);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Foco visible accesible, coherente con el acento de marca */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-avialas-reddeep);
+  outline-offset: 2px;
+}

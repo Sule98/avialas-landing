@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BackToTop from "./BackToTop";
+import { asset } from "@/lib/asset";
 
 const QUICK_LINKS = [
   { href: "#inicio", label: "Inicio" },
@@ -15,7 +16,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 pb-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <Image
-            src="/logo-avialas-blanco.png"
+            src={asset("/logo-avialas-blanco.png")}
             alt="AVIALAS S.A."
             width={160}
             height={64}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import RevealGroup, { RevealItem } from "./RevealGroup";
+import { asset } from "@/lib/asset";
 
 const SERVICIOS = [
   {
@@ -87,7 +88,7 @@ export default function Servicios() {
           <Reveal delay={0.1}>
             <div className="relative aspect-[16/7] w-full overflow-hidden rounded-3xl shadow-xl">
               <Image
-                src="/images/servicios-silos.jpg"
+                src={asset("/images/servicios-silos.jpg")}
                 alt="Silos industriales de alimentos balanceados"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"

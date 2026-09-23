@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
     >
       {/* Fotografía de fondo (placeholder de stock — ver README para sustituir por fotos oficiales) */}
       <Image
-        src="/images/hero-poultry.jpg"
+        src={asset("/images/hero-poultry.jpg")}
         alt="Granja avícola moderna"
         fill
         priority

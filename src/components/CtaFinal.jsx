@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import { asset } from "@/lib/asset";
 
 export default function CtaFinal() {
   return (
     <section className="relative overflow-hidden py-28 text-center">
       <Image
-        src="/images/cta-handshake.jpg"
+        src={asset("/images/cta-handshake.jpg")}
         alt="Alianza de negocios internacional"
         fill
         sizes="100vw"

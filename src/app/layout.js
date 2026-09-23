@@ -1,5 +1,6 @@
 import { Poppins, Mulish } from "next/font/google";
 import "./globals.css";
+import { asset } from "@/lib/asset";
 
 /* Sustitutos web de Century Gothic (titulares) y Tahoma (cuerpo) — ver README */
 const poppins = Poppins({
@@ -17,7 +18,11 @@ const mulish = Mulish({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://avialas-landing.vercel.app"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_PATH
+      ? "https://sule98.github.io"
+      : "https://avialas-landing.vercel.app",
+  ),
   title: "AVIALAS S.A. | Avícola y Alimento Animal S.A. — MINAG, Cuba",
   description:
     "AVIALAS S.A., entidad mixta cubana del MINAG dedicada a la actividad avícola y de alimentos balanceados. Gestionamos inversión extranjera con calidad, eficiencia y sostenibilidad.",
@@ -37,15 +42,15 @@ export const metadata = {
     title: "AVIALAS S.A. | Avícola y Alimento Animal S.A.",
     description:
       "Entidad mixta cubana del MINAG dedicada a la actividad avícola y de alimentos balanceados. Desarrollo sostenible e inversión extranjera.",
-    images: ["/logo-avialas-color.png"],
+    images: [asset("/logo-avialas-color.png")],
     locale: "es_CU",
   },
   icons: {
     icon: [
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+      { url: asset("/favicon-32.png"), sizes: "32x32", type: "image/png" },
+      { url: asset("/favicon-192.png"), sizes: "192x192", type: "image/png" },
     ],
-    apple: [{ url: "/favicon-180.png", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: asset("/favicon-180.png"), sizes: "180x180", type: "image/png" }],
   },
 };
 

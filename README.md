@@ -27,6 +27,8 @@ Construida con **Next.js 16 (App Router) + Tailwind CSS v4 + Framer Motion**.
   Reveal.jsx / RevealGroup.jsx   Utilidades de animación al hacer scroll (Framer Motion)
   ScrollProgress.jsx       Barra de progreso de scroll
   BackToTop.jsx            Botón "volver arriba"
+/src/lib/asset.js         Helper para rutas de /public (aplica basePath en la vista previa de Pages)
+/scripts/deploy-pages.mjs Compila el export estático y lo publica en la rama gh-pages
 /public/
   logo-avialas-color.png  Logotipo oficial (versión a color)
   logo-avialas-blanco.png Logotipo oficial (versión blanca, para fondos oscuros)
@@ -66,8 +68,29 @@ Vercel es la plataforma oficial de Next.js: optimiza imágenes automáticamente,
 
 > Si en algún momento se despliega con `vercel deploy` desde la CLI sin haber iniciado sesión (`vercel login`), la CLI ofrece un enlace de "claim" para asociar ese despliegue temporal a una cuenta después. Para producción estable, se recomienda conectar el repositorio de GitHub directamente desde el dashboard de Vercel.
 
-### Nota sobre GitHub Pages
-La versión anterior (HTML estático) estaba publicada en GitHub Pages. Next.js con App Router usa funciones de imagen/optimización que no son 100% compatibles con GitHub Pages sin configuración adicional (`output: 'export'` y perder la optimización automática de imágenes). Por eso, para esta versión se recomienda Vercel.
+### Vista previa en GitHub Pages
+**En vivo:** https://sule98.github.io/avialas-landing/
+
+Es un export estático (`output: 'export'`) publicado en la rama `gh-pages`, pensado como vista previa para revisión. Se activa solo con `DEPLOY_TARGET=pages` (ver `next.config.mjs`), por lo que no afecta la build normal ni Vercel. Diferencias respecto a la build normal: imágenes sin optimización (`images.unoptimized`) y prefijo `/avialas-landing`, que se aplica a las rutas de `/public` con el helper `src/lib/asset.js` (usa `asset("/ruta")` para cualquier imagen o archivo nuevo de `/public`).
+
+Para actualizar la vista previa después de cambiar código (con permisos de push al repo):
+```bash
+npm run deploy:pages
+```
+Compila el export en `out/` y lo publica (force-push) en la rama `gh-pages`. No edites `gh-pages` a mano. Este flujo no usa GitHub Actions.
+
+---
+
+## Colaborar en el proyecto
+
+El repositorio es público: https://github.com/Sule98/avialas-landing
+
+1. **Con permisos de escritura** (el propietario te invita en Settings → Collaborators): `git clone`, crea una rama (`git checkout -b mi-cambio`), haz commits y abre un Pull Request hacia `main`.
+2. **Sin permisos:** haz un Fork, trabaja en tu copia y abre un Pull Request desde ahí.
+3. Antes de abrir el PR: `npm run lint` y `npm run build` deben pasar sin errores.
+4. Tras fusionar a `main`, ejecutar `npm run deploy:pages` refresca la vista previa (y Vercel, si está conectado, despliega solo).
+
+> `AGENTS.md` y `CLAUDE.md` los genera Next.js para asistentes de IA; se mantienen en el repo. La carpeta `documentos/` (manual de USOS y documentos legales) no se sube a git: pide esos archivos al propietario si los necesitas.
 
 ---
 

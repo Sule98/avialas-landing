@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import { asset } from "@/lib/asset";
 
 export default function QuienesSomos() {
   return (
@@ -18,7 +19,7 @@ export default function QuienesSomos() {
           <Reveal delay={0.1} className="relative">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl">
               <Image
-                src="/images/quienes-somos-poultry.jpg"
+                src={asset("/images/quienes-somos-poultry.jpg")}
                 alt="Instalación avícola moderna"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"

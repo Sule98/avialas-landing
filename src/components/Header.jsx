@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 const NAV_LINKS = [
   { href: "#inicio", label: "Inicio" },
@@ -41,7 +42,7 @@ export default function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#inicio" aria-label="AVIALAS S.A. — Inicio" className="flex items-center">
           <Image
-            src="/logo-avialas-color.png"
+            src={asset("/logo-avialas-color.png")}
             alt="AVIALAS S.A. — Avícola y Alimento Animal S.A."
             width={220}
             height={74}

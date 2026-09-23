@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:pages": "cross-env DEPLOY_TARGET=pages next build",
+    "deploy:pages": "node scripts/deploy-pages.mjs"
   },
   "dependencies": {
     "framer-motion": "^13.4.1",
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
     "tailwindcss": "^4"

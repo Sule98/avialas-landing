@@ -1,0 +1,10 @@
+# Documentación fuente entregada por el cliente: contiene material con derechos
+# reservados (Manual de Identidad © USOS) y documentos legales con datos personales.
+# No se publica en un repositorio público.
+documentos/
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+*.log
+node_modules/

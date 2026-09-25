@@ -7,6 +7,7 @@ import Servicios from "@/components/Servicios";
 import CtaFinal from "@/components/CtaFinal";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import Marquee from "@/components/Marquee";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
 
       <main id="contenido-principal">
         <Hero />
+        <Marquee />
         <QuickFacts />
         <QuienesSomos />
         <Valores />

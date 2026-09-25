@@ -26,7 +26,7 @@ export default function Footer() {
             Avícola y Alimento Animal S.A. (AVIALAS S.A.)
           </p>
           <p className="mt-2 max-w-xs text-sm text-white/60">
-            Empresa perteneciente al Grupo Empresarial GEALAV, adscrita al
+            Empresa perteneciente al Grupo Empresarial de Alimentos y Aves (GEALAV), adscrita al
             Ministerio de la Agricultura (MINAG), República de Cuba.
           </p>
         </div>

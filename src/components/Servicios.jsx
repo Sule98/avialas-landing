@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import RevealGroup, { RevealItem } from "./RevealGroup";
+import Parallax from "./Parallax";
+import TiltCard from "./TiltCard";
 import { asset } from "@/lib/asset";
 
 const SERVICIOS = [
@@ -74,7 +76,7 @@ export default function Servicios() {
         <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-2">
           <Reveal>
             <span className="mb-3 inline-block font-heading text-xs font-bold uppercase tracking-widest text-avialas-red">
-              Áreas de Actuación
+              02 / Áreas de Actuación
             </span>
             <h2 className="max-w-xl font-heading text-3xl font-bold text-avialas-dark sm:text-4xl">
               Servicios y actividades de AVIALAS S.A.
@@ -86,7 +88,7 @@ export default function Servicios() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative aspect-[16/7] w-full overflow-hidden rounded-3xl shadow-xl">
+            <Parallax className="aspect-[16/7] w-full rounded-3xl shadow-xl">
               <Image
                 src={asset("/images/servicios-silos.jpg")}
                 alt="Silos industriales de alimentos balanceados"
@@ -95,28 +97,75 @@ export default function Servicios() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-avialas-dark/50 to-transparent" />
-            </div>
+            </Parallax>
           </Reveal>
         </div>
 
-        <RevealGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICIOS.map((s) => (
-            <RevealItem key={s.title}>
-              <article className="group h-full rounded-2xl border border-avialas-gray p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-avialas-yellow hover:shadow-xl">
-                <span className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-avialas-red text-white transition-transform duration-300 group-hover:scale-110">
-                  <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7">
-                    {s.icon}
-                  </svg>
-                </span>
-                <h3 className="font-heading text-lg font-bold text-avialas-dark">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-avialas-dark/70">
-                  {s.text}
-                </p>
-              </article>
-            </RevealItem>
-          ))}
+        <RevealGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-6">
+          {SERVICIOS.map((s, i) => {
+            const featured = i === 0;
+            // lg (6 columnas): destacada a todo el ancho, luego 3 + 2 tarjetas
+            const span = featured
+              ? "sm:col-span-2 lg:col-span-6"
+              : i <= 3
+                ? "lg:col-span-2"
+                : "lg:col-span-3";
+            return (
+              <RevealItem key={s.title} className={span}>
+                <TiltCard
+                  max={featured ? 3 : 7}
+                  glow={featured ? "rgba(248,183,0,0.22)" : "rgba(230,57,5,0.10)"}
+                  className={
+                    featured
+                      ? "rounded-2xl bg-avialas-dark p-8 shadow-xl sm:p-10"
+                      : "rounded-2xl border border-avialas-gray bg-white p-8 transition-colors duration-300 hover:border-avialas-yellow hover:shadow-xl"
+                  }
+                >
+                  <div className={featured ? "flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10" : ""}>
+                    <div className={featured ? "" : "mb-5 flex items-center justify-between"}>
+                      <span
+                        className={`icon-draw inline-flex items-center justify-center rounded-full transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 ${
+                          featured
+                            ? "h-20 w-20 bg-avialas-yellow text-avialas-dark"
+                            : "h-14 w-14 bg-avialas-red text-white"
+                        }`}
+                      >
+                        <svg viewBox="0 0 24 24" fill="none" className={featured ? "h-10 w-10" : "h-7 w-7"}>
+                          {s.icon}
+                        </svg>
+                      </span>
+                      {!featured && (
+                        <span className="font-heading text-4xl font-extrabold text-avialas-gray transition-colors group-hover:text-avialas-yellow/60">
+                          {`0${i + 1}`}
+                        </span>
+                      )}
+                    </div>
+                    <div>
+                      {featured && (
+                        <span className="mb-2 block font-heading text-xs font-bold uppercase tracking-widest text-avialas-yellow">
+                          01 · Nuestra actividad central
+                        </span>
+                      )}
+                      <h3 className={`font-heading font-bold ${featured ? "text-2xl text-white sm:text-3xl" : "text-lg text-avialas-dark"}`}>
+                        {s.title}
+                      </h3>
+                      <p className={`mt-2 leading-relaxed ${featured ? "max-w-2xl text-white/75" : "text-sm text-avialas-dark/70"}`}>
+                        {s.text}
+                      </p>
+                      {featured && (
+                        <a
+                          href="#contacto"
+                          className="mt-5 inline-flex items-center gap-2 font-heading text-sm font-bold text-avialas-yellow transition-all hover:gap-4"
+                        >
+                          Conectemos su proyecto <span aria-hidden="true">↗</span>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </TiltCard>
+              </RevealItem>
+            );
+          })}
         </RevealGroup>
       </div>
     </section>

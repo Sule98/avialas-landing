@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import RevealGroup, { RevealItem } from "./RevealGroup";
+import TiltCard from "./TiltCard";
 
 const VALORES = [
   {
@@ -78,7 +79,7 @@ export default function Valores() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <span className="mb-3 inline-block font-heading text-xs font-bold uppercase tracking-widest text-avialas-red">
-            Nuestra Cultura
+            03 / Nuestra Cultura
           </span>
           <h2 className="max-w-2xl font-heading text-3xl font-bold text-avialas-dark sm:text-4xl">
             Valores Compartidos de AVIALAS S.A.
@@ -88,11 +89,11 @@ export default function Valores() {
         <RevealGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {VALORES.map((v) => (
             <RevealItem key={v.n}>
-              <article className="group relative h-full overflow-hidden rounded-2xl bg-white p-8 shadow-sm ring-1 ring-avialas-gray transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-                <span className="absolute right-6 top-6 font-heading text-5xl font-extrabold text-avialas-gray/70 transition-colors group-hover:text-avialas-yellow/40">
-                  {v.n}
+              <TiltCard className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-avialas-gray transition-shadow duration-300 hover:shadow-xl">
+                <span className="absolute right-6 top-6 font-heading text-5xl font-extrabold text-avialas-gray/70 transition-all duration-300 group-hover:-translate-y-1 group-hover:text-avialas-yellow/50">
+                  {`0${v.n}`}
                 </span>
-                <span className="relative mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-avialas-yellow text-avialas-dark transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                <span className="icon-draw relative mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-avialas-yellow text-avialas-dark transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7">
                     {v.icon}
                   </svg>
@@ -103,7 +104,7 @@ export default function Valores() {
                 <p className="relative mt-2 text-sm leading-relaxed text-avialas-dark/70">
                   {v.text}
                 </p>
-              </article>
+              </TiltCard>
             </RevealItem>
           ))}
         </RevealGroup>

@@ -17,7 +17,11 @@ Construida con **Next.js 16 (App Router) + Tailwind CSS v4 + Framer Motion**.
   globals.css            Tokens de marca (colores/tipografías) para Tailwind v4
 /src/components/
   Header.jsx             Header sticky + menú móvil animado
-  Hero.jsx                Hero con foto de fondo, overlay y animaciones de entrada
+  Hero.jsx                Hero: titular animado por palabras + banner con revelado y brillo
+  Marquee.jsx             Franja amarilla en desplazamiento continuo
+  TiltCard.jsx            Tarjeta con inclinación 3D y brillo que sigue al cursor
+  Parallax.jsx            Contenedor con parallax para imágenes
+  PulseRings.jsx          Anillos pulsantes del CTA
   QuickFacts.jsx          Tarjeta flotante de datos rápidos (entidad, grupo, razón social)
   QuienesSomos.jsx        Misión y Visión, con fotografía
   Valores.jsx              Grid de los 6 Valores Compartidos
@@ -133,12 +137,12 @@ No se recibieron fotografías oficiales de AVIALAS. Por decisión del cliente, s
 
 | Archivo | Uso | Fuente |
 |---|---|---|
-| `public/images/hero-poultry.jpg` | Fondo del Hero | pexels.com/photo/32840073 |
+| `public/images/hero-banner.jpeg` | Banner del Hero (**imagen propia de AVIALAS**, con logo y textos incluidos; no es de stock) | Suministrada por el cliente |
 | `public/images/quienes-somos-poultry.jpg` | Sección Quiénes Somos | pexels.com/photo/26625882 |
 | `public/images/servicios-silos.jpg` | Sección Servicios | pexels.com/photo/38312031 |
 | `public/images/cta-handshake.jpg` | CTA final | pexels.com/photo/33175650 |
 
-**Sustituir por fotografía real de AVIALAS S.A.** (instalaciones, granjas, equipo, firmas de acuerdos) en cuanto esté disponible — basta con reemplazar el archivo manteniendo el mismo nombre, ya que `next/image` recalculará automáticamente el recorte/optimización.
+**Sustituir las de stock por fotografía real de AVIALAS S.A.** (instalaciones, granjas, equipo, firmas de acuerdos) en cuanto esté disponible — basta con reemplazar el archivo manteniendo el mismo nombre, ya que `next/image` recalculará automáticamente el recorte/optimización.
 
 ---
 

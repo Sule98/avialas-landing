@@ -35,7 +35,7 @@ export default function RevealGroup({ children, className = "" }) {
 
 export function RevealItem({ children, className = "" }) {
   return (
-    <motion.div className={className} variants={itemVariants}>
+    <motion.div className={`h-full ${className}`} variants={itemVariants}>
       {children}
     </motion.div>
   );

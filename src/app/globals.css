@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -30,6 +30,37 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
+}
+
+/* Franja en desplazamiento continuo (Marquee.jsx) */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+
+/* Iconos que "se dibujan" al pasar el cursor sobre una tarjeta (.group) */
+@keyframes draw-stroke {
+  from { stroke-dashoffset: 200; }
+  to { stroke-dashoffset: 0; }
+}
+.icon-draw svg * {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+}
+.group:hover .icon-draw svg * {
+  animation: draw-stroke 0.9s ease-out;
+}
+
+/* Brillo que cruza la imagen del hero */
+@keyframes shine-sweep {
+  0%, 55% { transform: translateX(-130%) skewX(-18deg); }
+  100% { transform: translateX(330%) skewX(-18deg); }
+}
+.animate-shine {
+  animation: shine-sweep 6s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

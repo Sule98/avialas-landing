@@ -158,7 +158,7 @@ No se recibieron fotografías oficiales de AVIALAS. Por decisión del cliente, s
 
 ## ⚠️ Notas pendientes para el próximo desarrollador
 
-1. **Datos de contacto TEMPORALES.** Correo (`contacto@avialas.cu`), teléfono (`+53 7 000 0000`) y dirección ("Playa, La Habana, Cuba — provisional") están marcados con comentarios `<!-- TODO -->` en `Footer.jsx` y `CtaFinal.jsx`. **Reemplazar antes de publicar en producción.**
+1. **Correo de contacto TEMPORAL.** `contacto@avialas.cu` (en `Footer.jsx` y `CtaFinal.jsx`, marcado con `TODO`) es un placeholder; **reemplazar por el correo oficial**. El teléfono (`+53 6343 8497`) y la dirección (Edificio Focsa, e/ M y N, Calle 17, La Habana, Cuba) ya son los confirmados por el cliente.
 2. **Redes sociales:** no se recibieron enlaces oficiales; el footer muestra "Muy pronto en redes sociales". Añadir los íconos/enlaces reales cuando existan.
 3. **Fotografías:** ver "Banco de imágenes" arriba — son placeholders de stock, sustituir por fotografía real de AVIALAS.
 4. **Logotipo:** sustituir los PNG extraídos del PDF por el archivo fuente oficial en cuanto el cliente lo entregue.

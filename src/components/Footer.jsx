@@ -35,7 +35,7 @@ export default function Footer() {
           <h3 className="mb-4 font-heading text-sm font-bold text-avialas-yellow">
             Contacto
           </h3>
-          {/* TODO: datos de contacto TEMPORALES — reemplazar por los oficiales de AVIALAS S.A. antes de publicar */}
+          {/* Teléfono y dirección confirmados por el cliente. TODO: el correo sigue siendo temporal — reemplazar por el oficial */}
           <ul className="flex flex-col gap-3 text-sm">
             <li className="flex items-start gap-2.5">
               <svg viewBox="0 0 24 24" fill="none" className="mt-0.5 h-[18px] w-[18px] shrink-0 text-avialas-yellow">
@@ -50,8 +50,8 @@ export default function Footer() {
               <svg viewBox="0 0 24 24" fill="none" className="mt-0.5 h-[18px] w-[18px] shrink-0 text-avialas-yellow">
                 <path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2C10.5 20 4 13.5 4 5a2 2 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.8" />
               </svg>
-              <a href="tel:+537000000" className="hover:text-avialas-yellow">
-                +53 7 000 0000
+              <a href="tel:+5363438497" className="hover:text-avialas-yellow">
+                +53 6343 8497
               </a>
             </li>
             <li className="flex items-start gap-2.5">
@@ -59,12 +59,7 @@ export default function Footer() {
                 <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z" stroke="currentColor" strokeWidth="1.8" />
                 <circle cx="12" cy="9" r="2.5" stroke="currentColor" strokeWidth="1.8" />
               </svg>
-              <span>
-                Playa, La Habana, Cuba{" "}
-                <em className="not-italic text-white/45">
-                  (dirección provisional, pendiente de confirmar)
-                </em>
-              </span>
+              <span>Edificio Focsa, e/ M y N, Calle 17, La Habana, Cuba</span>
             </li>
           </ul>
         </div>

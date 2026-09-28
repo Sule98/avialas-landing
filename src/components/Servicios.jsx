@@ -57,8 +57,8 @@ const SERVICIOS = [
     ),
   },
   {
-    title: "Servicios Informáticos y Auditoría",
-    text: "Servicios informáticos y auditorías internas a las empresas y sociedades mercantiles del Grupo Empresarial GEALAV.",
+    title: "Servicios Informáticos",
+    text: "Servicios informáticos a las empresas del Grupo Empresarial GEALAV y a terceros.",
     icon: (
       <>
         <rect x="3" y="4" width="18" height="13" rx="1.5" stroke="currentColor" strokeWidth="2" />

@@ -8,6 +8,7 @@ import CtaFinal from "@/components/CtaFinal";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import Marquee from "@/components/Marquee";
+import Slogan from "@/components/Slogan";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Marquee />
         <QuickFacts />
         <QuienesSomos />
+        <Slogan />
         <Valores />
         <Servicios />
         <CtaFinal />

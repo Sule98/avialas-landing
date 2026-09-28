@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BackToTop from "./BackToTop";
+import Reveal from "./Reveal";
 import { asset } from "@/lib/asset";
 
 const QUICK_LINKS = [
@@ -28,10 +29,6 @@ export default function Footer() {
           <p className="mt-2 max-w-xs text-sm text-white/60">
             Empresa perteneciente al Grupo Empresarial de Alimentos y Aves (GEALAV), adscrita al
             Ministerio de la Agricultura (MINAG), República de Cuba.
-          </p>
-          <p className="mt-5 max-w-xs border-l-2 border-avialas-yellow py-0.5 pl-4 text-sm font-medium leading-relaxed text-white">
-            No somos islas: somos parte de una corriente que, al fluir
-            unida, transforma realidades y trasciende generaciones.
           </p>
         </div>
 
@@ -154,8 +151,17 @@ export default function Footer() {
         </div>
       </div>
 
+      <div className="border-t border-white/10 py-14 sm:py-16">
+        <Reveal className="mx-auto max-w-4xl px-6 text-center sm:px-8">
+          <p className="font-heading text-2xl font-bold leading-snug text-avialas-yellow sm:text-3xl lg:text-4xl">
+            No somos islas: somos parte de una corriente que, al fluir
+            unida, transforma realidades y trasciende generaciones.
+          </p>
+        </Reveal>
+      </div>
+
       <div className="border-t border-white/10 py-6">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 text-sm text-white/50 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 text-center text-sm text-white/50 sm:flex-row sm:justify-between sm:px-6 sm:text-left lg:px-8">
           <p>&copy; {new Date().getFullYear()} AVIALAS S.A. Todos los derechos reservados.</p>
           <BackToTop />
         </div>

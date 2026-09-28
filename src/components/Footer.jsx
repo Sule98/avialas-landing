@@ -125,6 +125,19 @@ export default function Footer() {
                 </svg>
               </a>
             </li>
+            <li>
+              <a
+                href="https://x.com/Avialassa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AVIALAS S.A. en X"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-avialas-yellow hover:text-avialas-dark"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231ZM17.083 19.77h1.833L7.084 4.126H5.117Z" />
+                </svg>
+              </a>
+            </li>
           </ul>
 
           <a
@@ -151,11 +164,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-14 sm:py-16">
-        <Reveal className="mx-auto max-w-4xl px-6 text-center sm:px-8">
-          <p className="font-heading text-2xl font-bold leading-snug text-avialas-yellow sm:text-3xl lg:text-4xl">
-            No somos islas: somos parte de una corriente que, al fluir
-            unida, transforma realidades y trasciende generaciones.
+      <div className="overflow-hidden border-t border-white/10 py-16 sm:py-20">
+        <Reveal className="mx-auto max-w-7xl px-6 text-center sm:px-8">
+          <p className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-avialas-yellow drop-shadow-[0_4px_18px_rgba(248,183,0,0.35)] sm:text-4xl lg:text-5xl xl:text-6xl">
+            somos parte de una corriente que, al fluir unida, transforma
+            realidades y trasciende generaciones.
           </p>
         </Reveal>
       </div>

@@ -12,8 +12,8 @@ const FACTS = [
     text: "Grupo Empresarial de Alimentos y Aves",
   },
   {
-    title: "Razón social",
-    text: "Avícola y Alimento Animal S.A. (AVIALAS S.A.)",
+    title: "Avícola y Alimento Animal S.A.",
+    text: "En forma abreviada AVIALAS S.A., con objeto social en inversión extranjera y alianzas con entidades cubanas.",
   },
 ];
 

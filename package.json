@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "build:pages": "cross-env DEPLOY_TARGET=pages next build",
-    "deploy:pages": "node scripts/deploy-pages.mjs"
+    "deploy:pages": "node scripts/deploy-pages.mjs",
+    "generate:qr": "node scripts/generate-qr.mjs"
   },
   "dependencies": {
     "framer-motion": "^13.4.1",
@@ -21,6 +22,7 @@
     "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
+    "qrcode": "^1.5.4",
     "tailwindcss": "^4"
   }
 }

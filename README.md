@@ -158,12 +158,12 @@ No se recibieron fotografías oficiales de AVIALAS. Por decisión del cliente, s
 
 ## ⚠️ Notas pendientes para el próximo desarrollador
 
-1. **Correo de contacto TEMPORAL.** `contacto@avialas.cu` (en `Footer.jsx` y `CtaFinal.jsx`, marcado con `TODO`) es un placeholder; **reemplazar por el correo oficial**. El teléfono (`+53 6343 8497`) y la dirección (Edificio Focsa, e/ M y N, Calle 17, La Habana, Cuba) ya son los confirmados por el cliente.
-2. **Redes sociales:** no se recibieron enlaces oficiales; el footer muestra "Muy pronto en redes sociales". Añadir los íconos/enlaces reales cuando existan.
-3. **Fotografías:** ver "Banco de imágenes" arriba — son placeholders de stock, sustituir por fotografía real de AVIALAS.
+1. **Datos de contacto confirmados por el cliente:** correo `avialassa24@gmail.com`, teléfono `+53 6343 8497`, dirección Edificio Focsa (e/ M y N, Calle 17, La Habana, Cuba), y enlaces reales de Facebook, Instagram y WhatsApp en el footer.
+2. **QR de WhatsApp:** generado localmente (sin depender de un servicio externo) con `node scripts/generate-qr.mjs`, a partir del enlace `https://wa.me/qr/MWC3VGTPMM4XF1`. El SVG resultante vive en `public/images/whatsapp-qr.svg`. Si el enlace de WhatsApp cambia, edita la constante `WHATSAPP_URL` en `scripts/generate-qr.mjs` y vuelve a correr el script.
+3. **Fotografías:** ver "Banco de imágenes" arriba — las de stock (Quiénes Somos, Servicios, CTA) siguen siendo placeholders; sustituir por fotografía real de AVIALAS cuando esté disponible. El banner del hero ya es una imagen oficial suministrada por el cliente.
 4. **Logotipo:** sustituir los PNG extraídos del PDF por el archivo fuente oficial en cuanto el cliente lo entregue.
 5. **Fuentes oficiales:** si se obtienen los archivos licenciados de Century Gothic y Tahoma, se pueden auto-hospedar con `next/font/local` en lugar de `next/font/google`, sin cambiar el resto del código (solo `layout.js`).
-6. **Formulario de contacto:** el CTA de contacto es un enlace `mailto:`. Si se requiere un formulario con backend, se puede añadir un Route Handler de Next.js (`src/app/api/contacto/route.js`) o un servicio externo (Formspree, Resend).
+6. **Formulario de contacto:** el CTA de contacto es un enlace `mailto:` y un enlace de WhatsApp. Si se requiere un formulario con backend, se puede añadir un Route Handler de Next.js (`src/app/api/contacto/route.js`) o un servicio externo (Formspree, Resend).
 
 ---
 

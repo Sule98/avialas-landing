@@ -84,6 +84,11 @@ export default function Valores() {
           <h2 className="max-w-2xl font-heading text-3xl font-bold text-avialas-dark sm:text-4xl">
             Valores Compartidos de AVIALAS S.A.
           </h2>
+          <p className="mt-4 max-w-2xl text-lg italic text-avialas-dark/70">
+            Nuestros resultados hablan de un equipo que rema en la misma
+            dirección. Seguimos porque lo que hacemos tiene sentido para
+            nosotros&hellip;
+          </p>
         </Reveal>
 
         <RevealGroup className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

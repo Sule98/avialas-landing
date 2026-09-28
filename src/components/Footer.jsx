@@ -29,6 +29,10 @@ export default function Footer() {
             Empresa perteneciente al Grupo Empresarial de Alimentos y Aves (GEALAV), adscrita al
             Ministerio de la Agricultura (MINAG), República de Cuba.
           </p>
+          <p className="mt-4 max-w-xs text-sm italic text-avialas-yellow/80">
+            No somos islas: somos parte de una corriente que, al fluir
+            unida, transforma realidades y trasciende generaciones.
+          </p>
         </div>
 
         <div>

@@ -1,4 +1,4 @@
-import { Poppins, Mulish } from "next/font/google";
+import { Poppins, Mulish, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { asset } from "@/lib/asset";
 
@@ -14,6 +14,15 @@ const mulish = Mulish({
   variable: "--font-mulish",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  display: "swap",
+});
+
+/* Serif de acento para frases destacadas (p.ej. el cierre del footer) */
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["700", "800"],
+  style: ["italic"],
   display: "swap",
 });
 
@@ -56,7 +65,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${poppins.variable} ${mulish.variable}`}>
+    <html lang="es" className={`${poppins.variable} ${mulish.variable} ${playfair.variable}`}>
       <body className="min-h-screen bg-white font-body text-avialas-dark antialiased">
         {children}
       </body>

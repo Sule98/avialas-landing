@@ -166,8 +166,8 @@ export default function Footer() {
 
       <div className="overflow-hidden border-t border-white/10 py-16 sm:py-20">
         <Reveal className="mx-auto max-w-7xl px-6 text-center sm:px-8">
-          <p className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-avialas-yellow drop-shadow-[0_4px_18px_rgba(248,183,0,0.35)] sm:text-4xl lg:text-5xl xl:text-6xl">
-            somos parte de una corriente que, al fluir unida, transforma
+          <p className="font-display text-2xl italic leading-snug text-avialas-yellow drop-shadow-[0_4px_18px_rgba(248,183,0,0.35)] sm:text-3xl lg:text-4xl xl:text-5xl">
+            Somos parte de una corriente que, al fluir unida, transforma
             realidades y trasciende generaciones.
           </p>
         </Reveal>

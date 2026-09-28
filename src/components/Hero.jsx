@@ -123,9 +123,9 @@ export default function Hero() {
             >
               <Image
                 src={asset("/images/hero-banner.jpeg")}
-                alt="AVIALAS S.A. — Acompañamos a empresas y emprendedores en cada etapa: desde la idea hasta la materialización. Idea, alianzas, inversiones y resultados."
+                alt="Campo agrícola al amanecer, apretón de manos entre socios de negocio, ave de corral junto a alimento balanceado, e instalaciones industriales con silos de granos."
                 width={1600}
-                height={595}
+                height={539}
                 priority
                 sizes="(min-width: 1280px) 1216px, 100vw"
                 className="h-auto w-full"

@@ -4,7 +4,7 @@ import TiltCard from "./TiltCard";
 
 const FACTS = [
   {
-    title: "Entidad mixta cubana",
+    title: "Sociedad Mercantil cubana",
     text: "Adscrita al Ministerio de la Agricultura (MINAG)",
   },
   {

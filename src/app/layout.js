@@ -25,7 +25,7 @@ export const metadata = {
   ),
   title: "AVIALAS S.A. | Avícola y Alimento Animal S.A. — MINAG, Cuba",
   description:
-    "AVIALAS S.A., entidad mixta cubana del MINAG dedicada a la actividad avícola y de alimentos balanceados. Gestionamos inversión extranjera con calidad, eficiencia y sostenibilidad.",
+    "AVIALAS S.A., Sociedad Mercantil cubana del MINAG dedicada a la actividad avícola y de alimentos balanceados. Gestionamos inversión extranjera con calidad, eficiencia y sostenibilidad.",
   keywords: [
     "AVIALAS",
     "avícola",
@@ -41,7 +41,7 @@ export const metadata = {
     type: "website",
     title: "AVIALAS S.A. | Avícola y Alimento Animal S.A.",
     description:
-      "Entidad mixta cubana del MINAG dedicada a la actividad avícola y de alimentos balanceados. Desarrollo sostenible e inversión extranjera.",
+      "Sociedad Mercantil cubana del MINAG dedicada a la actividad avícola y de alimentos balanceados. Desarrollo sostenible e inversión extranjera.",
     images: [asset("/logo-avialas-color.png")],
     locale: "es_CU",
   },

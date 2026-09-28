@@ -1,6 +1,6 @@
 # Landing Page — AVIALAS S.A.
 
-Landing page corporativa de **Avícola y Alimento Animal S.A. (AVIALAS S.A.)**, entidad mixta cubana adscrita al Ministerio de la Agricultura (MINAG) e integrada al Grupo Empresarial GEALAV, dedicada a la actividad avícola y de alimentos balanceados.
+Landing page corporativa de **Avícola y Alimento Animal S.A. (AVIALAS S.A.)**, Sociedad Mercantil cubana adscrita al Ministerio de la Agricultura (MINAG) e integrada al Grupo Empresarial GEALAV, dedicada a la actividad avícola y de alimentos balanceados.
 
 Construida con **Next.js 16 (App Router) + Tailwind CSS v4 + Framer Motion**.
 
